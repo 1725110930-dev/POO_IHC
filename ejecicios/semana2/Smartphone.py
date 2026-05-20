@@ -12,7 +12,7 @@ class Smartphone:
         self.brand = brand
         self.battery_level = 100
 
-    def display_data(self):
+    def displayData(self):
         print("Material:", self.material)
         print("Size:", self.size)
         print("Port Type:", self.port_type)
@@ -24,19 +24,19 @@ class Smartphone:
         print("Charger:", self.charger)
         print("Brand:", self.brand)
 
-    def use_app(self, app_name):
+    def useApp(self, app_name):
         self.battery_level -= 5
         return f"Using {app_name}. Battery level is now {self.battery_level}%."
 
-    def charge_phone(self):
+    def chargePhone(self):
         self.battery_level = 100
         return f"Phone charged with the {self.charger} charger. Battery is at 100%."
 
-    def change_case(self, new_case):
+    def changeCase(self, new_case):
         self.case = new_case
         return f"The case was changed to a {self.case} case."
 
-    def break_screen(self):
+    def breakScreen(self):
         self.screen = "Broken LCD"
         return "Oh no! The screen is now broken."
 
@@ -54,9 +54,9 @@ phone1 = Smartphone(
     "Samsung"
 )
 
-phone1.display_data()
+phone1.displayData()
 print("-" * 30)
-print(phone1.use_app("Instagram"))
-print(phone1.break_screen())
-print(phone1.change_case("Leather"))
-print(phone1.charge_phone())
+print(phone1.useApp("Instagram"))
+print(phone1.breakScreen())
+print(phone1.changeCase("Leather"))
+print(phone1.chargePhone())
