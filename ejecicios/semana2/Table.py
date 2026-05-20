@@ -10,8 +10,7 @@ class Table:
         self.shape = shape
         self.brand = brand
         self.is_extendable = is_extendable
-        self.is_occupied = False
-        self.current_guests = 0
+        
 
     def occupy(self, guests):
         if guests <= self.capacity:
