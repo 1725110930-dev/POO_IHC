@@ -1,42 +1,41 @@
 class Bank:
-    def __init__(self, name, clients, atms, capital, color, schedule, num_buildings, system, security_staff):
+    def __init__(self, name, clients, atms, capital, color, schedule, branch_office, system, security_staff):
         self.name = name
         self.clients = clients
         self.atms = atms
         self.capital = capital
-        self.color = color
+        self.color = colo/
         self.schedule = schedule
-        self.num_buildings = num_buildings
+        self.branch_office = branch_office
         self.system = system
         self.security_staff = security_staff
 
-    def display_data(self):
+    def displayData(self):
         print("Bank Name:", self.name)
-        print("Number of clients:", self.clients)
-        print("Number of ATMs:", self.atms)
+        print("Clients:", self.clients)
+        print("ATMs:", self.atms)
         print("Capital:", self.capital)
-        print("Bank color:", self.color)
-        print("Business hours:", self.schedule)
-        print("Active buildings:", self.num_buildings)
+        print("Color:", self.color)
+        print("Schedule:", self.schedule)
+        print("Buildings:", self.branch_office)
+        print("System:", self.system)
+        print("Security Staff:", self.security_staff)
 
-    def register_client(self):
+    def addClient(self):
         self.clients += 1
-        return f"New client registered! Total clients: {self.clients}"
+        return f"Client added. Total: {self.clients}"
 
-    def process_deposit(self, amount):
+    def addCapital(self, amount):
         self.capital += amount
-        return f"Deposit successful. New bank capital: {self.capital}"
+        return f"Capital increased by {amount}. Total: {self.capital}"
 
-    def upgrade_security(self, new_guards):
-        self.security_staff += new_guards
-        return f"Security reinforced. Total guards: {self.security_staff}"
+    def hireSecurity(self, count):
+        self.security_staff += count
+        return f"Hired {count} guards. Total: {self.security_staff}"
 
-    def simulate_robbery(self, stolen_amount):
-        if self.security_staff >= 5:
-            return "The robbery attempt was thwarted by security staff."
-        else:
-            self.capital -= stolen_amount
-            return f"Alert: The robbery was successful. {stolen_amount} was lost. Remaining capital: {self.capital}"
+    def loseCapital(self, amount):
+        self.capital -= amount
+        return f"Lost {amount} from capital. Remaining: {self.capital}"
 
 
 bank1 = Bank(
@@ -51,10 +50,9 @@ bank1 = Bank(
     3
 )
 
-bank1.display_data()
+bank1.displayData()
 print("-" * 30)
-print(bank1.register_client())
-print(bank1.process_deposit(50000))
-print(bank1.simulate_robbery(200000))
-print(bank1.upgrade_security(4))
-print(bank1.simulate_robbery(200000))
+print(bank1.addClient())
+print(bank1.addCapital(50000))
+print(bank1.hireCecurity(4))
+print(bank1.loseCapital(200000))
