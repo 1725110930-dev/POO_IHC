@@ -27,21 +27,21 @@ class Transport:
         print(f"{self.brand} {self.model} is honking the horn.")
 
 
-tacoma = Transport(
-    "Toyota",
-    "Tacoma",
-    "Magnetic Gray",
-    "2026",
-    "Hybrid / Gas",
-    "180 km/h",
+subaru = Transport(
+    "Subaru",
+    "WRX",
+    "Blue",
+    "2025",
+    "Gasoline",
+    "320 km/h",
     4,
     "5 passengers",
-    "TCM-2026",
-    "950,000"
+    "WRX-2025",
+    "750,000"
 )
 
-tacoma.turnOn()
-tacoma.accelerate()
-tacoma.brake()
-tacoma.honk()
-tacoma.turnOff()
+subaru.turnOn()
+subaru.accelerate()
+subaru.brake()
+subaru.honk()
+subaru.turnOff()
