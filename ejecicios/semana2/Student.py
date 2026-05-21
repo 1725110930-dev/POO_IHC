@@ -26,7 +26,7 @@ class Student:
         self.semester += 1
         return f"Congratulations! Advanced to semester {self.semester}"
 
-    def registerFailedCourse(self):
+    def FailedCourse(self):
         self.failed_courses += 1
         return f"Current failed courses: {self.failed_courses}"
 
@@ -41,5 +41,5 @@ student1.displayData()
 print("-" * 30)
 print(student1.updateAverage(9.1))
 print(student1.advanceSemester())
-print(student1.registerFailedCourse())
+print(student1.FailedCourse())
 print(student1.changeCampus("Pachuca"))
