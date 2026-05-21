@@ -32,7 +32,7 @@ class Smartphone:
         self.battery_level = 100
         return f"Phone charged with the {self.charger} charger. Battery is at 100%."
 
-    def changeCase(self, new_case):
+    def changeCasePhone(self, new_case):
         self.case = new_case
         return f"The case was changed to a {self.case} case."
 
@@ -58,5 +58,5 @@ phone1.displayData()
 print("-" * 30)
 print(phone1.useApp("Instagram"))
 print(phone1.breakScreen())
-print(phone1.changeCase("Leather"))
+print(phone1.changeCasePhone("Leather"))
 print(phone1.chargePhone())
