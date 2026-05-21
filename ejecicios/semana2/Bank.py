@@ -4,7 +4,7 @@ class Bank:
         self.clients = clients
         self.atms = atms
         self.capital = capital
-        self.color = colo/
+        self.color = color
         self.schedule = schedule
         self.branch_office = branch_office
         self.system = system
