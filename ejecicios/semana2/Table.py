@@ -20,11 +20,11 @@ class Table:
         self.is_occupied = False
         return "The table is now free."
 
-    def change_color(self, new_color):
+    def changeColor(self, new_color):
         self.color = new_color
         return f"The table color is now {self.color}."
 
-    def apply_discount(self, percentage):
+    def applyDiscount(self, percentage):
         self.price -= self.price * (percentage / 100)
         return f"New price: ${self.price:.2f}"
 
@@ -39,5 +39,5 @@ my_table = Table("Oak Wood", "Brown", 4, 250.00, 75, 90, 140, "Rectangular", "Ho
 
 print(my_table.occupy())
 print(my_table.extend())
-print(my_table.apply_discount(15))
+print(my_table.applyDiscount(15))
 print(my_table.release())
