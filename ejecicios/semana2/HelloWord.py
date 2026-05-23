@@ -28,4 +28,12 @@ class HelloWord:
         result = num_one + num_two
         print(f"The addition is {result}")
 
-obj_name = HelloWord(self)
+obj_name = HelloWord()
+
+obj_name.methodOne()
+
+obj_name.methodTwo(1,2)
+
+obj_name.methonThree(34,5)
+
+obj_name.methodFour(12,34)
